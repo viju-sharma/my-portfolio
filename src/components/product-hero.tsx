@@ -22,7 +22,7 @@ export default function ProductHero() {
           transition={{ duration: 0.5 }}
         >
           <motion.h1
-            className="text-7xl font-bold text-purple-800 mb-6 leading-tight"
+            className="text-4xl md:text-5xl lg:text-7xl font-bold text-purple-800 mb-6 leading-tight"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.5 }}
@@ -30,7 +30,7 @@ export default function ProductHero() {
             Revolutionize Your Digital Experience
           </motion.h1>
           <motion.p
-            className="text-xl text-gray-600 mb-8"
+            className="text-lg md:text-xl text-gray-600 mb-8"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.5 }}

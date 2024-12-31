@@ -58,7 +58,7 @@ export default function ProductFeatures() {
     <section className="py-24 px-6 bg-gradient-to-br from-purple-100 to-indigo-100 relative overflow-hidden">
       <div className="container mx-auto relative z-10">
         <motion.h2
-          className="text-5xl font-bold text-center mb-16 text-purple-800"
+          className="text-3xl md:text-5xl font-bold text-center mb-8  md:mb-16 text-purple-800"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -104,6 +104,7 @@ export default function ProductFeatures() {
               >
                 <Image
                   src={feature.image}
+                  priority={true}
                   alt={`${feature.title} feature illustration`}
                   width={400}
                   height={300}
@@ -114,36 +115,6 @@ export default function ProductFeatures() {
           ))}
         </motion.div>
       </div>
-      <motion.div
-        className="absolute top-0 right-0 -z-10"
-        style={{
-          y: useTransform(scrollYProgress, [0, 1], [0, 200]),
-          rotate: useTransform(scrollYProgress, [0, 1], [0, 45]),
-        }}
-      >
-        <Image
-          src="/placeholder.svg?height=400&width=400&text=Features"
-          alt="Decorative top right"
-          width={400}
-          height={400}
-          className="opacity-10"
-        />
-      </motion.div>
-      <motion.div
-        className="absolute bottom-0 left-0 -z-10"
-        style={{
-          y: useTransform(scrollYProgress, [0, 1], [0, -200]),
-          rotate: useTransform(scrollYProgress, [0, 1], [0, -45]),
-        }}
-      >
-        <Image
-          src="/placeholder.svg?height=300&width=300&text=Tech"
-          alt="Decorative bottom left"
-          width={300}
-          height={300}
-          className="opacity-10"
-        />
-      </motion.div>
     </section>
   );
 }

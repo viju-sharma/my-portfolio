@@ -6,7 +6,7 @@ import Image from "next/image";
 import * as ExpImage from "@/assets/experience.jpeg";
 
 export default function CallToAction() {
-  const { scrollY, scrollYProgress } = useScroll();
+  const { scrollYProgress } = useScroll();
   const opacity = useTransform(scrollYProgress, [0.7, 0.8], [0, 1]);
   const scale = useTransform(scrollYProgress, [0.7, 0.8], [0.8, 1]);
   const MotionButton = motion.create(Button);
@@ -68,20 +68,6 @@ export default function CallToAction() {
             className="rounded-3xl shadow-2xl"
           />
         </motion.div>
-      </motion.div>
-      <motion.div
-        className="absolute top-0 left-0 w-full h-full -z-10"
-        style={{
-          y: useTransform(scrollY, [0, 500], [0, 150]),
-        }}
-      >
-        <Image
-          src="/placeholder.svg?height=1080&width=1920&text=CTA+Background"
-          alt="Call to Action background"
-          layout="fill"
-          objectFit="cover"
-          className="opacity-20"
-        />
       </motion.div>
     </section>
   );

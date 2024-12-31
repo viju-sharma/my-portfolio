@@ -77,20 +77,6 @@ export default function Testimonials() {
           ))}
         </div>
       </motion.div>
-      <motion.div
-        className="absolute top-0 left-0 w-full h-full -z-10"
-        style={{
-          y: useTransform(scrollYProgress, [0, 1], [0, 100]),
-        }}
-      >
-        <Image
-          src="/placeholder.svg?height=1080&width=1920&text=Testimonials+Background"
-          alt="Testimonials background"
-          layout="fill"
-          objectFit="cover"
-          className="opacity-10"
-        />
-      </motion.div>
     </section>
   );
 }
