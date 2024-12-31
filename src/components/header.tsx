@@ -23,7 +23,7 @@ export default function Header() {
       className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md"
       style={{ backgroundColor }}
     >
-      <div className="container flex h-16 items-center justify-between mx-auto">
+      <div className="container px-6 flex h-16 items-center justify-between mx-auto">
         <motion.div
           className="font-bold text-2xl text-purple-600"
           whileHover={{ scale: 1.05 }}
